@@ -1,0 +1,121 @@
+.why-section {
+  width: 100%;
+  background-color: #0077b6; /* Sleek slate-tinted canvas backdrop */
+  padding: 100px 24px;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Text Styles */
+.why-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.why-subtitle {
+  color: #ffff; /* Accent Aqua / Cyan */
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.why-title {
+  color: #ffffff; /* Primary Corporate Deep Blue */
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.why-desc-text {
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 4-Column Card Layout Configuration Grid */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* Individual Icon Card Blocks */
+.why-card {
+  background-color: #ffffff;
+  padding: 35px 25px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Subtle uplift animation and shadow depth on hover */
+.why-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(11, 61, 145, 0.06);
+  border-color: rgba(0, 184, 217, 0.3); /* Softly glows cyan on hover */
+}
+
+/* Icon Box Container Context */
+.why-icon-box {
+  width: 50px;
+  height: 50px;
+  background-color: #e6f8fa; /* Pastel brand soft aqua tint */
+  color: #00b8d9; /* Pure vibrant cyan icon lines */
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Icon line graphic sizing scaling */
+.why-icon-box svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* Changes background to deep bright cyan when hovering over the card parent */
+.why-card:hover .why-icon-box {
+  background-color: #00b8d9;
+  color: #ffffff;
+}
+
+.why-card-title {
+  color: #0b2545; /* Rich dark reading slate contrast */
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.why-card-desc {
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile responsive considerations */
+@media (max-width: 600px) {
+  .why-section {
+    padding: 60px 16px;
+  }
+  
+  .why-title {
+    font-size: 28px;
+  }
+  
+  .why-card {
+    padding: 25px 20px;
+  }
+}
