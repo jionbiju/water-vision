@@ -1,0 +1,159 @@
+.tech-section {
+  width: 100%;
+  background-color: #0f172a; /* Deep tech space-blue canvas background */
+  padding: 100px 24px;
+  position: relative;
+}
+
+.tech-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header Text Blocks styling */
+.tech-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px auto;
+}
+
+.tech-badge {
+  color: #00b8d9; /* Signature Aqua / Cyan */
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.tech-main-heading {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.tech-lead-text {
+  color: #94a3b8; /* Balanced low-contrast read text */
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* 4-Column responsive grid config */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 30px;
+}
+
+/* Structural Tech Cards */
+.tech-card {
+  background-color: #1e293b; /* Sleek dark card block */
+  border-radius: 16px;
+  border: 1px solid #334155;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.tech-card:hover {
+  transform: translateY(-6px);
+  border-color: #00b8d9; /* Card outline glows cyan on frame interaction */
+  box-shadow: 0 20px 40px rgba(0, 184, 217, 0.12);
+}
+
+/* Image bounding container layout context */
+.tech-img-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.tech-src-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tech-card:hover .tech-src-image {
+  transform: scale(1.08); /* Zoom effect on image during interaction */
+}
+
+/* Category Badge Labels */
+.tech-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(4px);
+  color: #00b8d9;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 184, 217, 0.4);
+  letter-spacing: 0.5px;
+}
+
+/* Text Meta Container Inside Cards */
+.tech-info-block {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.tech-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.tech-icon-wrapper {
+  color: #00b8d9;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.tech-icon-wrapper svg {
+  width: 100%;
+  height: 100%;
+}
+
+.tech-item-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.tech-item-desc {
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive breakdowns for compact viewports */
+@media (max-width: 768px) {
+  .tech-section {
+    padding: 60px 16px;
+  }
+
+  .tech-main-heading {
+    font-size: 28px;
+  }
+
+  .tech-img-box {
+    height: 180px;
+  }
+}
