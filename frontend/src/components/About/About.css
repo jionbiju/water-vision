@@ -1,0 +1,133 @@
+.about-section {
+  width: 100%;
+  background-color: #ffff; /* Clean white canvas background */
+  padding: 100px 24px;
+  overflow: hidden;
+}
+
+.abt-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  
+  gap: 60px;
+  align-items: center;
+}
+
+/* Desktop 2-Column Split Layout */
+@media (min-width: 992px) {
+  .abt-container {
+    grid-template-columns: 1.1fr 0.9fr; /* Left side slightly wider for comfortable reading lines */
+  }
+}
+
+/* Left Section Details */
+.abt-subtitle {
+  color: #00b8d9; /* Signature brand Aqua / Cyan accent color */
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.abt-title {
+  color: #0b3d91; /* Primary Corporate Deep Blue */
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Subtle line indicator under the heading matching premium layouts */
+.abt-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 50px;
+  height: 3px;
+  background-color: #00b8d9;
+}
+
+.abt-profile {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.abt-para {
+  color: #555555;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* Emphasizes the first summary block */
+.abt-para.highlight {
+  font-size: 17px;
+  color: #0b2545;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+/* Right Section Image Layout styling */
+.abt-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(11, 61, 145, 0.12); /* Clean blue-tinted depth shadow */
+}
+
+/* Decorative geometric backing panel context to make photo drop layout pop */
+.image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #00b8d9;
+  border-radius: 16px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.about-img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 16px;
+  display: block;
+  position: relative;
+  z-index: 2; /* Sits sharply in front of the cyan accent outline box */
+}
+
+/* Responsive Scaling for smaller screens */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 16px;
+  }
+  
+  .abt-title {
+    font-size: 30px;
+  }
+  
+  .about-img {
+    height: 320px; /* Reduces image height on mobile screen viewports */
+  }
+  
+  .image-wrapper::before {
+    left: -10px;
+    top: 10px;
+  }
+}
