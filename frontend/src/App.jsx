@@ -6,6 +6,7 @@ import About from './components/About/About'
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs'
 import Technology from './components/Technology/Technology'
 import Services from './components/Services/Services'
+import Contact from './components/Contact/Contact'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +19,7 @@ function App() {
       <WhyChooseUs/>
       <Services/>
       <Technology/>
+      <Contact/>
     </>
   )
 }
