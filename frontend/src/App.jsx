@@ -6,6 +6,7 @@ import About from './components/About/About'
 import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs'
 import Technology from './components/Technology/Technology'
 import Services from './components/Services/Services'
+import Gallery from './components/Gallary/Gallary'
 import Contact from './components/Contact/Contact'
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <WhyChooseUs/>
       <Services/>
       <Technology/>
+      <Gallery/>
       <Contact/>
     </>
   )

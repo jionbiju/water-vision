@@ -1,11 +1,10 @@
 import React from 'react';
 import './Technology.css';
-
-// Import local placeholder images for the manufacturing assets
 import pcbImg from '../../assets/controller-pcb.jpg';
 import panelImg from '../../assets/control-panel.jpg';
-import softwareImg from '../../assets/software-screen.jpg';
+import softwareImg from '../../assets/software-screen.jpeg';
 import ledImg from '../../assets/led-manufacturing.jpg';
+import RGB from '../../assets/RGB.png';
 
 const Technology = () => {
   const techItems = [
@@ -34,7 +33,7 @@ const Technology = () => {
     {
       category: "Panels",
       title: "Electrical Control Panels",
-      desc: "Heavy-duty, weather-protected control panels assembled raw in our workshop, housing variable frequency drives (VFD) and secure logic setups.",
+      desc: "Heavy-duty, weather-protected control panels assembled in our workshop, housing variable frequency drives (VFD) and secure logic setups.",
       image: panelImg,
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
@@ -58,30 +57,24 @@ const Technology = () => {
   return (
     <section className="tech-section" id="technology">
       <div className="tech-container">
-        
-        {/* Header Block Section */}
+
         <div className="tech-header">
           <span className="tech-badge">In-House Manufacturing</span>
           <h2 className="tech-main-heading">In-House Technology Development</h2>
           <p className="tech-lead-text">
-            Unlike traditional assemblers, we construct our own hardware, electrical backbones, 
-            and core software infrastructure. This complete vertical integration guarantees absolute 
+            Unlike traditional assemblers, we construct our own hardware, electrical backbones,
+            and core software infrastructure. This complete vertical integration guarantees absolute
             reliability and separates us from standard competitors.
           </p>
         </div>
 
-        {/* Dynamic 4-Column Core Grid */}
         <div className="tech-grid">
           {techItems.map((item, index) => (
             <div className="tech-card" key={index}>
-              
-              {/* Media Asset Window */}
               <div className="tech-img-box">
                 <img src={item.image} alt={item.title} className="tech-src-image" />
                 <span className="tech-tag">{item.category}</span>
               </div>
-
-              {/* Text Description Block */}
               <div className="tech-info-block">
                 <div className="tech-title-row">
                   <div className="tech-icon-wrapper">{item.icon}</div>
@@ -89,7 +82,6 @@ const Technology = () => {
                 </div>
                 <p className="tech-item-desc">{item.desc}</p>
               </div>
-
             </div>
           ))}
         </div>

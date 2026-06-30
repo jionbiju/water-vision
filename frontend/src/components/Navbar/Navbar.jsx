@@ -1,31 +1,46 @@
-import React from 'react';
-import './Navbar.css'; 
+import React, { useState, useEffect } from 'react';
+import './Navbar.css';
 import logo from '../../assets/logo.jpeg';
+
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="navbar-container">
-        {/* Logo and Brand Section */}
         <div className="logo-box">
-          <img src={logo} alt="Water Vision Fountains Logo" className="logo-img" />
-          <h2 className="brand-name">
-            WATER VISION <br />
-            <span className="brand-subtext">FOUNTAINS</span>
-          </h2>
+          <div className="logo-img-wrapper">
+            <img src={logo} alt="Water Vision Logo" className="logo-img" />
+          </div>
+          <div>
+            <h2 className="brand-name">Water Vision</h2>
+            <span className="brand-subtext">Fountains</span>
+          </div>
         </div>
 
-        {/* Navigation Links */}
-        <div className="nav-menu">
+        <div className={`nav-menu ${menuOpen ? 'nav-menu-open' : ''}`}>
           <ul className="nav-list">
-            <li className="nav-item"><a href="#home" className="nav-link active">Home</a></li>
-            <li className="nav-item"><a href="#about" className="nav-link">About Us</a></li>
-            <li className="nav-item"><a href="#services" className="nav-link">Products & Services</a></li>
-            <li className="nav-item"><a href="#technology" className="nav-link">Technology</a></li>
-            <li className="nav-item"><a href="#projects" className="nav-link">Projects</a></li>
-            <li className="nav-item"><a href="#gallery" className="nav-link">Gallery</a></li>
-            <li className="nav-item"><a href="#contact" className="nav-link">Contact</a></li>
+            <li><a href="#home" className="nav-link active" onClick={() => setMenuOpen(false)}>Home</a></li>
+            <li><a href="#about" className="nav-link" onClick={() => setMenuOpen(false)}>About</a></li>
+            <li><a href="#services" className="nav-link" onClick={() => setMenuOpen(false)}>Services</a></li>
+            <li><a href="#technology" className="nav-link" onClick={() => setMenuOpen(false)}>Technology</a></li>
+            <li><a href="#gallery" className="nav-link" onClick={() => setMenuOpen(false)}>Gallery</a></li>
+            <li><a href="#contact" className="nav-link" onClick={() => setMenuOpen(false)}>Contact</a></li>
           </ul>
         </div>
+
+        <a href="#contact" className="nav-cta">Get a Quote</a>
+
+        <button className={`hamburger ${menuOpen ? 'open' : ''}`} onClick={() => setMenuOpen(p => !p)} aria-label="Menu">
+          <span /><span /><span />
+        </button>
       </div>
     </nav>
   );

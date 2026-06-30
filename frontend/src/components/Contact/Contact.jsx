@@ -1,65 +1,47 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './Contact.css';
 
 const Contact = () => {
-  // Local state hook captures input form string vectors
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    scope: ''
-  });
+  const [formData, setFormData] = useState({ name: '', email: '', phone: '', scope: '' });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  // Pre-formatted template generator handles structured messaging output
-  const generateMessageText = () => {
-    return `Hello Water Vision Fountains,\n\nMy name is ${formData.name || '[Name]'}.\nI am inquiring about a fountain installation project scope.\n\n*Details:*\n- Email: ${formData.email || 'N/A'}\n- Phone: ${formData.phone || 'N/A'}\n- Requirements: ${formData.scope || 'No specifics provided.'}`;
-  };
+  const generateMessageText = () =>
+    `Hello Water Vision Fountains,\n\nMy name is ${formData.name || '[Name]'}.\n` +
+    `I am inquiring about a fountain installation project scope.\n\n*Details:*\n` +
+    `- Email: ${formData.email || 'N/A'}\n- Phone: ${formData.phone || 'N/A'}\n` +
+    `- Requirements: ${formData.scope || 'No specifics provided.'}`;
 
-  // Handler 1: Routes compiled state data directly via WhatsApp API Endpoint
   const handleWhatsAppSend = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.scope) {
-      alert("Please fill in your Name and Project Scope requirements.");
-      return;
-    }
-    const targetNumber = "919446287873"; // Direct primary communication line
-    const encodedMessage = encodeURIComponent(generateMessageText());
-    window.open(`https://api.whatsapp.com/send?phone=${targetNumber}&text=${encodedMessage}`, '_blank');
+    if (!formData.name || !formData.scope) { alert("Please fill in your Name and Project Scope."); return; }
+    const number = "919446287873";
+    window.open(`https://api.whatsapp.com/send?phone=${number}&text=${encodeURIComponent(generateMessageText())}`, '_blank');
   };
 
-  // Handler 2: Formats a structured mailto anchor window trigger
   const handleEmailSend = (e) => {
     e.preventDefault();
-    if (!formData.name || !formData.scope) {
-      alert("Please fill in your Name and Project Scope requirements.");
-      return;
-    }
-    const targetEmail = "info@watervisionfountains.com"; // Replace with client's actual domain address
-    const subject = encodeURIComponent(`Fountain Project Inquiry - ${formData.name}`);
-    const body = encodeURIComponent(generateMessageText());
-    window.location.href = `mailto:${targetEmail}?subject=${subject}&body=${body}`;
+    if (!formData.name || !formData.scope) { alert("Please fill in your Name and Project Scope."); return; }
+    const email = "info@watervisionfountains.com";
+    window.location.href = `mailto:${email}?subject=${encodeURIComponent(`Fountain Project Inquiry – ${formData.name}`)}&body=${encodeURIComponent(generateMessageText())}`;
   };
 
   return (
     <section className="contact-section" id="contact">
       <div className="contact-container">
-        
-        {/* Left Grid Column: Corporate Communication Data Cards */}
+
         <div className="contact-info-block">
           <span className="contact-badge">Connect With Us</span>
           <h2 className="contact-main-heading">Let's Build Something Landmark</h2>
           <p className="contact-lead-desc">
-            Reach out to our engineering office directly to explore design workflows, technical 
-            documentation parameters, request estimates, or clear structural procurement tenders.
+            Reach out to our engineering office to explore design workflows, request estimates,
+            or clear structural procurement tenders.
           </p>
 
           <div className="contact-cards-stack">
-            {/* Metadata Card */}
             <div className="info-meta-card">
               <span className="gstin-label">GSTIN: 32AHFPL4898K1ZV</span>
               <h4 className="meta-card-title">Water Vision Fountains</h4>
@@ -69,73 +51,45 @@ const Contact = () => {
               </p>
             </div>
 
-            {/* Direct Lines Links */}
             <div className="info-links-grid">
               <div className="link-item">
-                <span className="link-label">Call Engineering Desks</span>
+                <span className="link-label">Call Engineering Desk</span>
                 <a href="tel:+919446287873" className="link-value">+91 94462 87873</a>
                 <a href="tel:+918590674402" className="link-value">+91 85906 74402</a>
               </div>
               <div className="link-item">
-                <span className="link-label">Official Email Inbox</span>
-                <a href="mailto:info@watervisionfountains.com" className="link-value">info@watervisionfountains.com</a>
+                <span className="link-label">Official Email</span>
+                <a href="mailto:info@watervisionfountains.com" className="link-value">
+                  info@watervisionfountains.com
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Right Grid Column: Real-Time Communication Router Form */}
         <div className="contact-form-block">
           <h3 className="form-box-title">Request Project Estimates</h3>
           <form className="inquiry-form">
-            
-            <div className="input-group-row">
-              <input 
-                type="text" 
-                name="name"
-                placeholder="Your Name / Organization" 
-                value={formData.name}
-                onChange={handleInputChange}
-                className="form-input"
-                required
-              />
-            </div>
 
             <div className="input-group-row">
-              <input 
-                type="email" 
-                name="email"
-                placeholder="Business Email Address" 
-                value={formData.email}
-                onChange={handleInputChange}
-                className="form-input"
-              />
+              <input type="text" name="name" placeholder="Your Name / Organisation"
+                value={formData.name} onChange={handleInputChange} className="form-input" required />
             </div>
-
             <div className="input-group-row">
-              <input 
-                type="tel" 
-                name="phone"
-                placeholder="Contact Phone Number" 
-                value={formData.phone}
-                onChange={handleInputChange}
-                className="form-input"
-              />
+              <input type="email" name="email" placeholder="Business Email Address"
+                value={formData.email} onChange={handleInputChange} className="form-input" />
             </div>
-
             <div className="input-group-row">
-              <textarea 
-                name="scope"
-                rows="4" 
-                placeholder="Describe your project scope (e.g. Park Musical Fountain, Resort Dry Deck, Dam Multimedia)..." 
-                value={formData.scope}
-                onChange={handleInputChange}
-                className="form-textarea"
-                required
-              ></textarea>
+              <input type="tel" name="phone" placeholder="Contact Phone Number"
+                value={formData.phone} onChange={handleInputChange} className="form-input" />
+            </div>
+            <div className="input-group-row">
+              <textarea name="scope" rows="4"
+                placeholder="Describe your project scope (e.g. Park Musical Fountain, Resort Dry Deck…)"
+                value={formData.scope} onChange={handleInputChange}
+                className="form-textarea" required />
             </div>
 
-            {/* Router Action Button Split Cluster */}
             <div className="form-action-cluster">
               <button onClick={handleWhatsAppSend} className="action-btn btn-whatsapp">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="btn-icon">
@@ -143,7 +97,7 @@ const Contact = () => {
                 </svg>
                 Send via WhatsApp
               </button>
-              
+
               <button onClick={handleEmailSend} className="action-btn btn-email">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2.5} stroke="currentColor" className="btn-icon">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
@@ -155,6 +109,18 @@ const Contact = () => {
           </form>
         </div>
 
+      </div>
+
+      <div className="contact-footer-strip">
+        <p className="footer-copy">
+          © {new Date().getFullYear()} <span>Water Vision Fountains</span>. All rights reserved.
+        </p>
+        <div className="footer-links">
+          <a href="#home" className="footer-link">Home</a>
+          <a href="#about" className="footer-link">About</a>
+          <a href="#services" className="footer-link">Services</a>
+          <a href="#contact" className="footer-link">Contact</a>
+        </div>
       </div>
     </section>
   );
