@@ -60,7 +60,7 @@ const Hero = () => {
       <div className="hero-content">
         <div className="hero-eyebrow">
           <span className="eyebrow-dot" />
-          India's Premier Fountain Engineers
+          Make Fountains For Your Wonderland
         </div>
 
         <h1 className="hero-title">
@@ -86,12 +86,12 @@ const Hero = () => {
         </div>
         <div className="stat-divider" />
         <div className="stat-item">
-          <span className="stat-number">200+</span>
+          <span className="stat-number">150+</span>
           <span className="stat-label">Projects Delivered</span>
         </div>
         <div className="stat-divider" />
         <div className="stat-item">
-          <span className="stat-number">15+</span>
+          <span className="stat-number">10+</span>
           <span className="stat-label">States Covered</span>
         </div>
         <div className="stat-divider" />

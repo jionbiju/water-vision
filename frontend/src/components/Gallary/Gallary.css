@@ -113,52 +113,40 @@
   filter: brightness(1) saturate(1.4);
 }
 
-/* ── Overlay ───────────────────────────────────────────── */
+/* ── Hover overlay (subtle shine, no caption) ──────────── */
 .gallery-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(6, 14, 31, 0.85) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(0, 212, 255, 0.06) 0%, transparent 60%);
   opacity: 0;
   transition: opacity 0.35s ease;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 18px;
-  gap: 8px;
+  pointer-events: none;
 }
 
 .gallery-item:hover .gallery-overlay {
   opacity: 1;
 }
 
+/* ── Video play badge ──────────────────────────────────── */
 .gallery-play-icon {
-  width: 52px;
-  height: 52px;
-  background: rgba(0, 212, 255, 0.15);
-  border: 2px solid #00d4ff;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  background: rgba(0, 212, 255, 0.18);
+  border: 1px solid rgba(0, 212, 255, 0.5);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #00d4ff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -60%);
+  pointer-events: none;
 }
 
 .gallery-play-icon svg {
-  width: 24px;
-  height: 24px;
-}
-
-.gallery-caption {
-  color: #ffffff;
-  font-size: 13px;
-  font-weight: 600;
-  text-align: center;
-  letter-spacing: 0.4px;
+  width: 16px;
+  height: 16px;
 }
 
 /* ── Lightbox ──────────────────────────────────────────── */
@@ -186,18 +174,11 @@
 
 .lightbox-media {
   max-width: 100%;
-  max-height: 78vh;
+  max-height: 82vh;
   border-radius: 14px;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
   object-fit: contain;
   border: 1px solid rgba(0, 212, 255, 0.15);
-}
-
-.lightbox-caption {
-  color: #8ab0cc;
-  font-size: 14px;
-  text-align: center;
-  margin: 0;
 }
 
 .lightbox-counter {
@@ -280,5 +261,5 @@
   .gallery-section { padding: 80px 16px; }
   .gallery-grid { columns: 1; }
   .lightbox-arrow { display: none; }
-  .lightbox-media { max-height: 65vh; }
+  .lightbox-media { max-height: 70vh; }
 }
