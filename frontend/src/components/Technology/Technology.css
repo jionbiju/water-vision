@@ -224,4 +224,10 @@
   .tech-section { padding: 80px 16px; }
   .tech-main-heading { font-size: 1.9rem; }
   .tech-img-box { height: 190px; }
+  .tech-card { flex: 1 1 100%; max-width: 100%; }
+  .tech-header { margin-bottom: 48px; }
+}
+
+@media (max-width: 480px) {
+  .tech-info-block { padding: 20px; }
 }

@@ -240,5 +240,11 @@
 @media (max-width: 768px) {
   .projects-section { padding: 80px 16px; }
   .project-img-wrap { height: 200px; }
-  .project-card { max-width: 100%; }
+  .project-card { flex: 1 1 100%; max-width: 100%; }
+  .projects-header { margin-bottom: 48px; }
+}
+
+@media (max-width: 480px) {
+  .project-info { padding: 18px 20px 22px; }
+  .project-name { font-size: 16px; }
 }

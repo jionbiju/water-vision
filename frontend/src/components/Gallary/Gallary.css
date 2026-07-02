@@ -259,7 +259,9 @@
 
 @media (max-width: 600px) {
   .gallery-section { padding: 80px 16px; }
-  .gallery-grid { columns: 1; }
+  .gallery-grid { columns: 1; column-gap: 0; }
+  .gallery-item { margin-bottom: 12px; }
   .lightbox-arrow { display: none; }
   .lightbox-media { max-height: 70vh; }
+  .lightbox-content { max-width: 95vw; }
 }

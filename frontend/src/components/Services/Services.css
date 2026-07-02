@@ -217,6 +217,12 @@
 
 @media (max-width: 768px) {
   .services-section { padding: 80px 16px; }
-  .services-grid { grid-template-columns: 1fr; }
+  .services-grid { grid-template-columns: 1fr; gap: 24px; }
   .service-img-wrapper { height: 210px; }
+  .service-content-block { padding: 22px 20px 26px; }
+}
+
+@media (max-width: 480px) {
+  .services-header { margin-bottom: 48px; }
+  .service-item-title { font-size: 18px; }
 }

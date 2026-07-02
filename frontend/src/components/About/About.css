@@ -224,7 +224,17 @@
 
 @media (max-width: 768px) {
   .about-section { padding: 80px 16px; }
-  .about-img { height: 320px; }
+  .abt-container { gap: 48px; }
+  .about-img { height: 280px; }
   .img-float-badge { display: none; }
   .image-wrapper::before { display: none; }
+  .abt-stats-row { gap: 12px; }
+  .abt-stat-chip { padding: 14px 18px; }
+  .abt-stat-num { font-size: 1.6rem; }
+}
+
+@media (max-width: 480px) {
+  .abt-stats-row { justify-content: center; }
+  .abt-stat-chip { flex: 1 1 calc(33% - 8px); min-width: 80px; }
+  .about-img { height: 240px; }
 }
