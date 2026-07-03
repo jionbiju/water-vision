@@ -18,11 +18,11 @@ function App() {
       <Navbar/>
       <Hero/>
       <About/>
+      <Projects/>
       <WhyChooseUs/>
       <Services/>
       <Technology/>
       <Gallery/>
-      <Projects/>
       <Contact/>
     </>
   )
