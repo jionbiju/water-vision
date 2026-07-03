@@ -25,7 +25,7 @@ const Contact = () => {
   const handleEmailSend = (e) => {
     e.preventDefault();
     if (!formData.name || !formData.scope) { alert("Please fill in your Name and Project Scope."); return; }
-    const email = "info@watervisionfountains.com";
+    const email = "watervisionfountains@gmail.com";
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(`Fountain Project Inquiry – ${formData.name}`)}&body=${encodeURIComponent(generateMessageText())}`;
   };
 
@@ -60,7 +60,7 @@ const Contact = () => {
               <div className="link-item">
                 <span className="link-label">Official Email</span>
                 <a href="mailto:info@watervisionfountains.com" className="link-value">
-                  info@watervisionfountains.com
+                  watervisionfountains@gmail.com
                 </a>
               </div>
             </div>
