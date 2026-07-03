@@ -1,42 +1,43 @@
 import React from 'react';
 import './Services.css';
-
+import img1 from '../../assets/services/Musical_Fountains.png';
+import img2 from '../../assets/services/Dancing Fountains.jpg';
+import img6 from '../../assets/services/Dry Deck Fountains.png';
+import img3 from '../../assets/services/Multimedia Fountains.jpeg';
+import img4 from '../../assets/services/Floating Fountains.jpeg';
+import img5 from '../../assets/services/Interactive Fountains.png';
 const serviceList = [
   {
     title: "Musical Fountains",
     desc: "Choreographed water displays perfectly timed to musical rhythms using proprietary automation software.",
-    image: "https://images.unsplash.com/photo-1549877475-4c07ca26fe57?q=80&w=600&auto=format&fit=crop"
+    image: img1
   },
   {
     title: "Dancing Fountains",
     desc: "Fluid water movements creating beautiful continuous geometric patterns with precise multi-nozzle control.",
-    image: "https://images.unsplash.com/photo-1508849789987-4e5333c12b78?q=80&w=600&auto=format&fit=crop"
+    image: img2
   },
   {
     title: "Multimedia Fountains",
     desc: "Spectacular sensory setups combining water, lasers, projection video curtains, and colourful lighting.",
-    image: "https://images.unsplash.com/photo-1531747118685-ca8fa6e08806?q=80&w=600&auto=format&fit=crop"
+    image: img3
   },
   {
     title: "Floating Fountains",
     desc: "Heavy-duty floating platform setups engineered for natural lakes, reservoirs, and deep water bodies.",
-    image: "https://images.unsplash.com/photo-1558236714-d1ae5030efc4?q=80&w=600&auto=format&fit=crop"
+    image: img4
   },
   {
     title: "Interactive Fountains",
     desc: "Engaging public fixtures responsive to motion sensors, step pads, or touchpads for community play.",
-    image: "https://images.unsplash.com/photo-1519817650390-64a93db51149?q=80&w=600&auto=format&fit=crop"
+    image: img5
   },
   {
     title: "Dry Deck Fountains",
     desc: "Architectural floor-flush nozzles with underground drainage safe for pedestrian walkways and plazas.",
-    image: "https://images.unsplash.com/photo-1563245372-f21724e3856d?q=80&w=600&auto=format&fit=crop"
-  },
-  {
-    title: "Fountain Renovation",
-    desc: "Complete overhaul, modernisation of manual valves, and conversion of aging pools into smart systems.",
-    image: "https://images.unsplash.com/photo-1596249622995-2c8e053f3e09?q=80&w=600&auto=format&fit=crop"
-  },
+    image: img6
+  }
+  
 ];
 
 const Services = () => (
