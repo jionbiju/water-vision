@@ -154,7 +154,7 @@
   color: #ffffff;
   border-color: transparent;
   box-shadow: 0 8px 25px rgba(0,212,255,0.4);
-  transform: rotate(5deg) scale(1.1);
+  transform: scale(1.1);
 }
 
 .why-card-title {
@@ -176,7 +176,6 @@
   margin: 0;
 }
 
-/* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 768px) {
   .why-section { padding: 80px 16px; }
   .why-header { margin-bottom: 48px; }
