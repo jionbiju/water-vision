@@ -87,7 +87,7 @@
 
 .why-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 28px;
 }
 
@@ -179,7 +179,7 @@
 @media (max-width: 768px) {
   .why-section { padding: 80px 16px; }
   .why-header { margin-bottom: 48px; }
-  .why-grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
   .why-card { padding: 26px 20px; }
 }
 

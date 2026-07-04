@@ -75,7 +75,7 @@ const Hero = () => {
 
         <div className="hero-btn-group">
           <a href="#services" className="btn btn-primary">Explore Services</a>
-          <a href="#contact" className="btn btn-secondary">Request A Quote</a>
+          <a href="#contact" className="btn btn-secondary">Get A Quote</a>
         </div>
       </div>
 
@@ -86,12 +86,12 @@ const Hero = () => {
         </div>
         <div className="stat-divider" />
         <div className="stat-item">
-          <span className="stat-number">150+</span>
+          <span className="stat-number">50+</span>
           <span className="stat-label">Projects Delivered</span>
         </div>
         <div className="stat-divider" />
         <div className="stat-item">
-          <span className="stat-number">10+</span>
+          <span className="stat-number">5+</span>
           <span className="stat-label">States Covered</span>
         </div>
         <div className="stat-divider" />
