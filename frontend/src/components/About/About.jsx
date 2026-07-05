@@ -42,11 +42,11 @@ const About = () => {
               <span className="abt-stat-lbl">Years Active</span>
             </div>
             <div className="abt-stat-chip">
-              <span className="abt-stat-num">200+</span>
+              <span className="abt-stat-num">50+</span>
               <span className="abt-stat-lbl">Projects</span>
             </div>
             <div className="abt-stat-chip">
-              <span className="abt-stat-num">15+</span>
+              <span className="abt-stat-num">5+</span>
               <span className="abt-stat-lbl">States</span>
             </div>
           </div>
