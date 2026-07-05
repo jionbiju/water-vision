@@ -231,3 +231,52 @@
 @media (max-width: 480px) {
   .tech-info-block { padding: 20px; }
 }
+
+/* ── View More button ───────────────────────────────────── */
+.tech-toggle-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 48px;
+}
+
+.tech-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 36px;
+  background: transparent;
+  border: 1.5px solid rgba(0, 212, 255, 0.45);
+  color: #00d4ff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tech-toggle-btn svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+
+.tech-toggle-btn:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: #00d4ff;
+  box-shadow: 0 0 24px rgba(0, 212, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .tech-section { padding: 80px 16px; }
+  .tech-main-heading { font-size: 1.9rem; }
+  .tech-img-box { height: 190px; }
+  .tech-card { flex: 1 1 100%; max-width: 100%; }
+  .tech-header { margin-bottom: 48px; }
+}
+
+@media (max-width: 480px) {
+  .tech-info-block { padding: 20px; }
+}
