@@ -1,0 +1,286 @@
+/* ── Page wrapper ─────────────────────────────────────────── */
+.gp-page {
+  min-height: 100vh;
+  background: linear-gradient(160deg, #060e1f 0%, #081525 100%);
+  color: #fff;
+}
+
+/* ── Top bar ──────────────────────────────────────────────── */
+.gp-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  background: rgba(6, 14, 31, 0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(0, 212, 255, 0.12);
+}
+
+.gp-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1.5px solid rgba(0, 212, 255, 0.35);
+  color: #00d4ff;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.gp-back-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.gp-back-btn:hover {
+  background: rgba(0, 212, 255, 0.1);
+  border-color: #00d4ff;
+}
+
+.gp-topbar-brand {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  letter-spacing: 0.5px;
+}
+
+/* ── Header ───────────────────────────────────────────────── */
+.gp-header {
+  text-align: center;
+  padding: 60px 24px 40px;
+}
+
+.gp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #00d4ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 14px;
+}
+
+.gp-badge::before,
+.gp-badge::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: rgba(0, 212, 255, 0.5);
+}
+
+.gp-heading {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.gp-subtext {
+  color: #8ab0cc;
+  font-size: 16px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 16px;
+}
+
+.gp-count {
+  display: inline-block;
+  background: rgba(0, 212, 255, 0.1);
+  border: 1px solid rgba(0, 212, 255, 0.25);
+  color: #00d4ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 16px;
+  border-radius: 20px;
+}
+
+/* ── Grid ─────────────────────────────────────────────────── */
+.gp-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+}
+
+.gp-grid {
+  columns: 4;
+  column-gap: 14px;
+}
+
+.gp-item {
+  break-inside: avoid;
+  margin-bottom: 14px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  border: 1px solid rgba(0, 212, 255, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.gp-item:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(0,212,255,0.1);
+  border-color: rgba(0, 212, 255, 0.3);
+}
+
+.gp-media {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  filter: brightness(0.85) saturate(1.1);
+  transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+.gp-video-thumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.gp-item:hover .gp-media {
+  transform: scale(1.05);
+  filter: brightness(1) saturate(1.4);
+}
+
+.gp-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,212,255,0.05) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.gp-item:hover .gp-overlay { opacity: 1; }
+
+.gp-play-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background: rgba(0, 212, 255, 0.18);
+  border: 1px solid rgba(0, 212, 255, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d4ff;
+  pointer-events: none;
+}
+
+.gp-play-icon svg { width: 14px; height: 14px; }
+
+/* ── Lightbox ─────────────────────────────────────────────── */
+.gp-lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(4, 10, 22, 0.97);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: gpFadeIn 0.2s ease;
+}
+
+@keyframes gpFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.gp-lightbox-content {
+  max-width: 90vw;
+  max-height: 88vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.gp-lightbox-media {
+  max-width: 100%;
+  max-height: 82vh;
+  border-radius: 12px;
+  object-fit: contain;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+  border: 1px solid rgba(0, 212, 255, 0.12);
+}
+
+.gp-lightbox-counter {
+  color: rgba(0, 212, 255, 0.6);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.gp-lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  background: rgba(0,212,255,0.1);
+  border: 1px solid rgba(0,212,255,0.3);
+  color: #00d4ff;
+  font-size: 18px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: background 0.2s ease;
+}
+
+.gp-lightbox-close:hover { background: rgba(0,212,255,0.25); }
+
+.gp-lightbox-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.25);
+  color: #00d4ff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: background 0.2s ease;
+}
+
+.gp-lightbox-arrow:hover { background: rgba(0,212,255,0.22); }
+.gp-lightbox-arrow svg { width: 22px; height: 22px; }
+.gp-lightbox-prev { left: 20px; }
+.gp-lightbox-next { right: 20px; }
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 1200px) { .gp-grid { columns: 3; } }
+@media (max-width: 768px)  {
+  .gp-grid { columns: 2; column-gap: 10px; }
+  .gp-item { margin-bottom: 10px; }
+  .gp-topbar { padding: 12px 16px; }
+  .gp-topbar-brand { display: none; }
+  .gp-header { padding: 40px 16px 28px; }
+}
+@media (max-width: 480px)  {
+  .gp-grid { columns: 1; }
+  .gp-lightbox-arrow { display: none; }
+  .gp-lightbox-media { max-height: 65vh; }
+}

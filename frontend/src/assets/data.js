@@ -67,3 +67,54 @@ export const techItems = [
     icon: 'cog',
   },
 ];
+
+// ─────────────────────────────────────────────────────────────
+//  Gallery — All Media Items
+// ─────────────────────────────────────────────────────────────
+import gImg1  from './gallary/diamond cut.jpg';
+import gImg2  from './gallary/dome 2mdia.jpg';
+import gImg3  from './gallary/Dome 3mdia.jpg';
+import gImg4  from './gallary/dome-fountain-713.jpg';
+import gImgFill from './gallary/fill gap.jpeg';
+import gImg5  from './gallary/IMG20210622200308_00.jpg';
+import gImg6  from './gallary/IMG20230502185406_01.jpg';
+import gImg7  from './gallary/IMG20230502185411_01.jpg';
+import gImg8  from './gallary/IMG20230502185444_01.jpg';
+import gImg9  from './gallary/IMG20230502185505_01.jpg';
+import gImg10 from './gallary/IMG20230502190007_01.jpg';
+import gImg11 from './gallary/IMG20230502190151_01.jpg';
+import gImg12 from './gallary/IMG20230502190330_01.jpg';
+import gImg13 from './gallary/IMG20230502190518_01.jpg';
+import gImg14 from './gallary/IMG20230502190559_01.jpg';
+import gImg15 from './gallary/IMG20230823230802.jpg';
+import gImg16 from './gallary/IMG20230823230903.jpg';
+import gImg17 from './gallary/IMG20240305192520.jpg';
+import gImg18 from './gallary/IMG20240305193004.jpg';
+import gImg19 from './gallary/IMG20250925003759.jpg';
+import gVid1  from './gallary/VID20220311203413.mp4';
+import gVid2  from './gallary/VID-20241016-WA0012.mp4';
+
+export const mediaItems = [
+  { type: 'image', src: gImg1  },
+  { type: 'image', src: gImg2  },
+  { type: 'image', src: gImg3  },
+  { type: 'image', src: gImg4  },
+  { type: 'image', src: gImgFill },
+  { type: 'image', src: gImg5  },
+  { type: 'image', src: gImg6  },
+  { type: 'image', src: gImg7  },
+  { type: 'image', src: gImg8  },
+  { type: 'image', src: gImg9  },
+  { type: 'image', src: gImg10 },
+  { type: 'image', src: gImg11 },
+  { type: 'image', src: gImg12 },
+  { type: 'image', src: gImg13 },
+  { type: 'image', src: gImg14 },
+  { type: 'image', src: gImg15 },
+  { type: 'image', src: gImg16 },
+  { type: 'image', src: gImg17 },
+  { type: 'image', src: gImg18 },
+  { type: 'image', src: gImg19 },
+  { type: 'video', src: gVid1  },
+  { type: 'video', src: gVid2  },
+];

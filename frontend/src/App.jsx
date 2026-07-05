@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
@@ -9,22 +9,29 @@ import Services from './components/Services/Services'
 import Gallery from './components/Gallary/Gallary'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
+import GallaryPage from './pages/GallaryPage'
+
+// Main single-page layout
+const HomePage = () => (
+  <>
+    <Navbar />
+    <Hero />
+    <About />
+    <WhyChooseUs />
+    <Technology />
+    <Services />
+    <Projects />
+    <Gallery />
+    <Contact />
+  </>
+);
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <WhyChooseUs/>
-      <Technology/>
-      <Services/>
-      <Projects/>
-      <Gallery/>
-      <Contact/>
-    </>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/gallery" element={<GallaryPage />} />
+    </Routes>
   )
 }
 
