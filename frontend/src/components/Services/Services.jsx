@@ -1,44 +1,5 @@
-import React from 'react';
 import './Services.css';
-import img1 from '../../assets/services/Musical_Fountains.png';
-import img2 from '../../assets/services/Dancing Fountains.jpg';
-import img6 from '../../assets/services/Dry Deck Fountains.png';
-import img3 from '../../assets/services/Multimedia Fountains.jpeg';
-import img4 from '../../assets/services/Floating Fountains.jpeg';
-import img5 from '../../assets/services/Interactive Fountains.png';
-const serviceList = [
-  {
-    title: "Musical Fountains",
-    desc: "Choreographed water displays perfectly timed to musical rhythms using proprietary automation software.",
-    image: img1
-  },
-  {
-    title: "Dancing Fountains",
-    desc: "Fluid water movements creating beautiful continuous geometric patterns with precise multi-nozzle control.",
-    image: img2
-  },
-  {
-    title: "Multimedia Fountains",
-    desc: "Spectacular sensory setups combining water, lasers, projection video curtains, and colourful lighting.",
-    image: img3
-  },
-  {
-    title: "Floating Fountains",
-    desc: "Heavy-duty floating platform setups engineered for natural lakes, reservoirs, and deep water bodies.",
-    image: img4
-  },
-  {
-    title: "Interactive Fountains",
-    desc: "Engaging public fixtures responsive to motion sensors, step pads, or touchpads for community play.",
-    image: img5
-  },
-  {
-    title: "Dry Deck Fountains",
-    desc: "Architectural floor-flush nozzles with underground drainage safe for pedestrian walkways and plazas.",
-    image: img6
-  }
-  
-];
+import { serviceItems } from '../../assets/data.js';
 
 const Services = () => (
   <section className="services-section" id="services">
@@ -54,7 +15,7 @@ const Services = () => (
       </div>
 
       <div className="services-grid">
-        {serviceList.map((service, i) => (
+        {serviceItems.map((service, i) => (
           <div className="service-card" key={i} style={{ animationDelay: `${i * 0.08}s` }}>
             <div className="service-img-wrapper">
               <img src={service.image} alt={service.title} className="service-photo" loading="lazy" />

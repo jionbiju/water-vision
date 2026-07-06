@@ -8,7 +8,7 @@ import imgUSB           from './technology/USB Show Controller.jpeg';
 import imgPC            from './technology/PC-Based Control System.jpeg';
 import imgIsolator      from './technology/Dedicated Isolator Unit.jpeg';
 import imgControlPanel  from './technology/In-House Control Panel Manufacturing.jpg';
-import imgLED           from './technology/RGB-RGBW LED Light Manufacturing.jpg';
+import imgLED           from './technology/RGB-RGBW LED Light Manufacturing.jpeg';
 import imgCustom        from './technology/Custom Manufacturing.jpeg';
 
 export const techItems = [
@@ -117,4 +117,47 @@ export const mediaItems = [
   { type: 'image', src: gImg19 },
   { type: 'video', src: gVid1  },
   { type: 'video', src: gVid2  },
+];
+
+// ─────────────────────────────────────────────────────────────
+//  Services
+// ─────────────────────────────────────────────────────────────
+import sImg1 from './services/Musical Dancing Fountain.jpeg';
+import sImg2 from './services/Multimedia laser show.jpeg';
+import sImg3 from './services/Floating Fountains.jpeg';
+import sImg4 from './services/Still fountain.jpeg';
+import sImg5 from './services/Water curtains.jpeg';
+import sImg6 from './services/Interactive Fountains.png';
+
+export const serviceItems = [
+  {
+    title: 'Musical Dancing Fountain',
+    desc: 'Symphonic water, light, and music choreographies that draw crowds and elevate property prestige.',
+    image: sImg1,
+  },
+  {
+    title: 'Multimedia Laser Show',
+    desc: 'High-impact 3D graphics and animations projected onto grand water screens for civic events.',
+    image: sImg2,
+  },
+  {
+    title: 'Floating Fountains',
+    desc: 'Heavy-duty, self-adjusting lake systems that enhance resort aesthetics while naturally aerating the water.',
+    image: sImg3,
+  },
+  {
+    title: 'Still Fountain',
+    desc: 'Classic, steady-flow architectural installations bring timeless luxury and calm to executive lobbies.',
+    image: sImg4,
+  },
+  {
+    title: 'Water Curtains',
+    desc: 'Splash-free vertical water walls using specialized guide ropes for silent, elegant interior partitions.',
+    image: sImg5,
+  },
+  {
+    title: 'Interactive Play Fountains',
+    desc: 'Safe, flush-to-ground water plazas with smart sensors designed for public parks and family resorts.',
+    image: sImg6,
+  },
 ];
