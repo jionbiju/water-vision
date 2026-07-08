@@ -10,8 +10,8 @@ import Gallery from './components/Gallary/Gallary'
 import Projects from './components/Projects/Projects'
 import Contact from './components/Contact/Contact'
 import GallaryPage from './pages/GallaryPage'
+import ProjectsPage from './pages/ProjectsPage'
 
-// Main single-page layout
 const HomePage = () => (
   <>
     <Navbar />
@@ -31,6 +31,7 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/gallery" element={<GallaryPage />} />
+      <Route path="/projects/:category" element={<ProjectsPage />} />
     </Routes>
   )
 }
