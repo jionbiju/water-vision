@@ -31,24 +31,6 @@ export const techItems = [
     icon: "phone",
   },
   {
-    title: "USB Show Controller",
-    desc: "Standalone controller that runs pre-programmed fountain shows directly from a USB drive for simple and reliable operation.",
-    image: imgUSB,
-    icon: "usb",
-  },
-  {
-    title: "PC-Based Control System",
-    desc: "Advanced PC-controlled platform for programming, live operation, and complete synchronization of water, lighting, music, and multimedia effects.",
-    image: imgPC,
-    icon: "desktop",
-  },
-  {
-    title: "Dedicated Isolator Unit",
-    desc: "Dedicated hardware unit providing safe electrical and signal isolation between controllers and power panels for enhanced reliability and protection.",
-    image: imgIsolator,
-    icon: "shield",
-  },
-  {
     title: "In-House Control Panel Manufacturing",
     desc: "Custom-built electrical control panels designed and manufactured in-house for reliable fountain automation and power management.",
     image: imgControlPanel,
@@ -66,6 +48,25 @@ export const techItems = [
     image: imgCustom,
     icon: "cog",
   },
+  {
+    title: "USB Show Controller",
+    desc: "Standalone controller that runs pre-programmed fountain shows directly from a USB drive for simple and reliable operation.",
+    image: imgUSB,
+    icon: "usb",
+  },
+  {
+    title: "PC-Based Control System",
+    desc: "Advanced PC-controlled platform for programming, live operation, and complete synchronization of water, lighting, music, and multimedia effects.",
+    image: imgPC,
+    icon: "desktop",
+  },
+  {
+    title: "Dedicated Isolator Unit",
+    desc: "Dedicated hardware unit providing safe electrical and signal isolation between controllers and power panels for enhanced reliability and protection.",
+    image: imgIsolator,
+    icon: "shield",
+  },
+  
 ];
 
 // ─────────────────────────────────────────────────────────────

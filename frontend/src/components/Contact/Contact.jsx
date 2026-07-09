@@ -85,7 +85,7 @@ const Contact = () => {
             </div>
             <div className="input-group-row">
               <textarea name="scope" rows="4"
-                placeholder="Describe your project scope (e.g. Park Musical Fountain, Resort Dry Deck…)"
+                placeholder="Describe about Fountain Type, Size/Dimensions, and Environment (Indoor/Outdoor)"
                 value={formData.scope} onChange={handleInputChange}
                 className="form-textarea" required />
             </div>

@@ -13,7 +13,7 @@ const ProjectCard = ({ project }) => (
   <div className="project-card">
     <div className="project-img-wrap">
       <img src={project.image} alt={project.name} className="project-img" />
-      {!project.direct && <span className="project-assoc-tag">Associated</span>}
+      
       <div className="project-img-overlay" />
     </div>
     <div className="project-info">
