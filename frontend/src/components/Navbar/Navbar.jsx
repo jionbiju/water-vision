@@ -29,9 +29,9 @@ const Navbar = () => {
           <ul className="nav-list">
             <li><a href="#home" className="nav-link active" onClick={() => setMenuOpen(false)}>Home</a></li>
             <li><a href="#about" className="nav-link" onClick={() => setMenuOpen(false)}>About</a></li>
-            <li><a href="#projects" className="nav-link" onClick={() => setMenuOpen(false)}>Project</a></li>
-            <li><a href="#services" className="nav-link" onClick={() => setMenuOpen(false)}>Services</a></li>
             <li><a href="#technology" className="nav-link" onClick={() => setMenuOpen(false)}>Technology</a></li>
+            <li><a href="#services" className="nav-link" onClick={() => setMenuOpen(false)}>Services</a></li>
+            <li><a href="#projects" className="nav-link" onClick={() => setMenuOpen(false)}>Project</a></li>
             <li><a href="#gallery" className="nav-link" onClick={() => setMenuOpen(false)}>Gallery</a></li>
             <li><a href="#contact" className="nav-link" onClick={() => setMenuOpen(false)}>Contact</a></li>
           </ul>
