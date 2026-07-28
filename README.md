@@ -1,139 +1,202 @@
-# Water Vision Fountains 
+# 💧 Water Vision Fountains — Official Website
 
-Official website for **Water Vision Fountains**, Kerala's leading manufacturer and installer of Musical, Dancing, Multimedia, and Floating Fountain Systems.
+> **Live:** [watervisionfountains.in](https://www.watervisionfountains.in)  
+> **Status:** ✅ Production — Frontend Live | 🔧 Backend — Coming Soon
 
-🌐 **Live Preview:** [https://water-vision-topaz.vercel.app](https://water-vision-topaz.vercel.app)
-
----
-
-## Table of Contents
-
-- [Overview](#overview)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-- [Sections](#sections)
-- [SEO](#seo)
-- [Deployment](#deployment)
-- [Backend Integration (Upcoming)](#backend-integration-upcoming)
-- [Contact](#contact)
+A fully responsive, SEO-optimised business website built for **Water Vision Fountains** — Kerala's leading manufacturer and installer of Musical, Dancing, Multimedia, and Floating Fountain Systems.
 
 ---
 
-## Overview
+## 🖥️ Project Overview
 
-This is a **fully static frontend** built with React + Vite. It is designed to be hosted on any standard web server (Apache, Nginx, etc.) or a static hosting platform (Vercel, Netlify, cPanel).
+This project was designed, developed, and deployed as a complete client delivery. The site covers the company's full portfolio — services, in-house technology, completed projects across India, and a media gallery — with direct WhatsApp and email inquiry integration.
 
-The site is fully responsive across all screen sizes — mobile, tablet, and desktop.
+The domain `watervisionfountains.in` was purchased, connected, and deployed on **Vercel** with full SEO configuration.
 
 ---
 
-## Tech Stack
+## ✨ What Was Built
+
+### Pages
+| Route | Description |
+|---|---|
+| `/` | Full single-page website with all sections |
+| `/gallery` | Dedicated full-screen masonry gallery (19 images + 2 videos) |
+| `/projects/kerala` | All Kerala projects — 12 installations |
+| `/projects/other-states` | Projects across Karnataka, Goa, Telangana, Meghalaya & more |
+
+### Sections on Homepage
+| Section | Details |
+|---|---|
+| **Hero** | Full-viewport animated banner with water effects and company stats |
+| **About** | Company background, founding year, project count |
+| **Why Choose Us** | 6 USP highlight cards with custom SVG icons |
+| **Services** | 6 fountain service types with real project images |
+| **Technology** | 9 in-house technology cards with View More toggle |
+| **Projects** | Kerala + Other States categories, 3 preview cards each |
+| **Gallery** | 6 preview images with lightbox + link to full gallery page |
+| **Contact** | Project inquiry form — dispatches via WhatsApp API & Email |
+
+---
+
+## 🛠️ Services Showcased
+
+1. **Musical Dancing Fountain** — Symphonic water, light, and music choreographies
+2. **Multimedia Laser Show** — 3D graphics projected onto water screens
+3. **Floating Fountains** — Self-adjusting lake systems with aeration
+4. **Still Fountain** — Classic architectural installations for lobbies and plazas
+5. **Water Curtains** — Vertical water walls for interior partitions
+6. **Interactive Play Fountains** — Flush-to-ground sensor-based water plazas
+
+---
+
+## ⚙️ Tech Stack
 
 | Layer | Technology |
 |---|---|
 | UI Library | React 19 |
 | Build Tool | Vite 8 |
+| Routing | React Router DOM v6 |
 | Styling | Plain CSS (per-component) |
-| Linting | OxLint |
-| Deployment | Vercel (current) / Any static host |
+| Deployment | Vercel |
+| Domain | GoDaddy → `watervisionfountains.in` |
 
 ---
 
-## Project Structure
+## 🔍 SEO Implementation
+
+Full SEO setup included in `index.html`:
+
+- ✅ Keyword-rich `<title>` tag targeting fountain searches across India
+- ✅ `<meta description>` optimised for click-through from Google results
+- ✅ **Open Graph tags** — rich preview cards when link is shared on WhatsApp/Facebook
+- ✅ **Twitter/X card** metadata
+- ✅ **LocalBusiness JSON-LD schema** — powers Google Maps, local search sidebar, and knowledge panel
+- ✅ **Canonical URL** pointing to `watervisionfountains.in`
+- ✅ `public/sitemap.xml` — lists all 4 pages for Google to crawl
+- ✅ `public/robots.txt` — instructs search crawlers and points to sitemap
+
+---
+
+## 📁 Project Structure
 
 ```
 frontend/
-├── public/                   # Static public assets
+├── public/
+│   ├── logo.jpeg           # Favicon
+│   ├── og-image.png        # Social share preview image (1200×630)
+│   ├── sitemap.xml         # Google sitemap
+│   └── robots.txt          # Crawler instructions
 ├── src/
 │   ├── assets/
-│   │   ├── gallary/          # Gallery images & videos
-│   │   └── projects/         # Project showcase images (1.jpeg – 12.jpeg)
+│   │   ├── data.js         # Centralised data — tech, gallery, services, projects
+│   │   ├── gallary/        # 19 gallery images + 2 videos
+│   │   ├── projects/
+│   │   │   ├── kerala/     # 12 Kerala project images
+│   │   │   └── other states/ # 13 other states project images
+│   │   ├── services/       # 6 service images
+│   │   └── technology/     # 9 technology product images
 │   ├── components/
-│   │   ├── Navbar/           # Sticky navigation with mobile hamburger menu
-│   │   ├── Hero/             # Full-screen hero with animated background
-│   │   ├── About/            # Company overview with stats
-│   │   ├── WhyChooseUs/      # 8 feature highlight cards
-│   │   ├── Services/         # 7 service cards with images
-│   │   ├── Technology/       # In-house technology showcase
-│   │   ├── Projects/         # 12 completed project cards
-│   │   ├── Gallary/          # Masonry photo & video gallery with lightbox
-│   │   └── Contact/          # Inquiry form with WhatsApp & Email dispatch
-│   ├── App.jsx               # Root component — section order
-│   ├── App.css
-│   ├── index.css             # Global reset, CSS variables, shared keyframes
-│   └── main.jsx              # React entry point
-├── index.html                # HTML shell with SEO meta tags & schema markup
-├── package.json
-├── vite.config.js
+│   │   ├── Navbar/
+│   │   ├── Hero/
+│   │   ├── About/
+│   │   ├── WhyChooseUs/
+│   │   ├── Services/
+│   │   ├── Technology/
+│   │   ├── Projects/
+│   │   ├── Gallary/
+│   │   └── Contact/
+│   ├── pages/
+│   │   ├── GallaryPage.jsx      # Full gallery page (/gallery)
+│   │   ├── GallaryPage.css
+│   │   ├── ProjectsPage.jsx     # Projects page (/projects/:category)
+│   │   └── ProjectsPage.css
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+├── index.html              # SEO meta tags, schema markup
 └── README.md
 ```
 
 ---
 
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) v18 or higher
-- npm v9 or higher
-
-### Installation
+## 🚀 Getting Started
 
 ```bash
-# 1. Clone the repository
-git clone <repository-url>
-cd frontend
-
-# 2. Install dependencies
+# Install dependencies
 npm install
 
-# 3. Start the development server
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-The site will be available at `http://localhost:5173`
-
 ---
 
-## Available Scripts
+## 🔧 Backend — Coming Soon
 
-| Command | Description |
+The frontend is fully static. The backend integration is planned for the next phase.
+
+### What the backend will enable
+
+| Feature | Details |
 |---|---|
-| `npm run dev` | Start local development server with hot reload |
-| `npm run build` | Build optimised static output to `dist/` folder |
-| `npm run preview` | Preview the production build locally |
-| `npm run lint` | Run OxLint code linter |
+| Contact form API | Store inquiries in a database instead of WhatsApp/Email only |
+| Admin dashboard | Client can manage projects, gallery, and services without code |
+| Dynamic content | Projects and gallery loaded from a database |
+| Email notifications | Auto-email on new inquiry submission |
 
----
+### Planned API Endpoints
 
-## Sections
-
-| Section | ID | Description |
+| Method | Endpoint | Purpose |
 |---|---|---|
-| Navbar | — | Sticky nav, scroll-aware, mobile hamburger |
-| Hero | `#home` | Full-screen banner with animated water effects and stats |
-| About | `#about` | Company background, founding year, project count |
-| Why Choose Us | `#why-choose-us` | 8 USP highlight cards |
-| Services | `#services` | 7 fountain service types with descriptions |
-| Technology | `#technology` | In-house manufactured hardware & software |
-| Projects | `#projects` | 12 completed projects with location, client, and year |
-| Gallery | `#gallery` | Masonry grid of 19 images + 2 videos with lightbox viewer |
-| Contact | `#contact` | Project inquiry form — sends via WhatsApp API or Email |
+| `POST` | `/api/inquiry` | Submit project inquiry |
+| `GET` | `/api/projects` | Fetch projects dynamically |
+| `GET` | `/api/gallery` | Fetch gallery media |
+| `POST` | `/api/admin/projects` | Add new project (admin) |
+
+### Frontend integration point
+
+When the backend is ready, update `Contact.jsx`:
+
+```js
+// Replace current WhatsApp dispatch with:
+const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/inquiry`, {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify(formData),
+});
+```
+
+Add to `.env`:
+```
+VITE_API_BASE_URL=https://api.watervisionfountains.in
+```
 
 ---
 
+## 📞 Client
 
+**Water Vision Fountains**  
+Kanakkary P.O., Ettumanoor, Kottayam, Kerala – 686632  
+📞 +91 94462 87873 / +91 85906 74402  
+📧 info@watervisionfountains.com  
+🌐 [watervisionfountains.in](https://www.watervisionfountains.in)  
+🏷️ GSTIN: 32AHFPL4898K1ZV
+
+---
+
+## 👨‍💻 Developed By
+
+**Jion Biju** — Full Stack Developer  
 
 
 
 ---
 
-## Backend Integration (Upcoming)
-
-The current site is **fully static** 
-
-
-
-
+*Built with React + Vite. Deployed on Vercel. Domain via GoDaddy.*
